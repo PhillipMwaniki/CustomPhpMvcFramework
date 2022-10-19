@@ -10,6 +10,7 @@ class Application
     public Request $request;
     public Response $response;
     public Router $router;
+    public Controller $controller;
 
     /**
      * @param  string  $rootPath
@@ -27,5 +28,21 @@ class Application
     public function run()
     {
         echo $this->router->resolve();
+    }
+
+    /**
+     * @return \app\core\Controller
+     */
+    public function getController(): Controller
+    {
+        return $this->controller;
+    }
+
+    /**
+     * @param  \app\core\Controller  $controller
+     */
+    public function setController(Controller $controller): void
+    {
+        $this->controller = $controller;
     }
 }

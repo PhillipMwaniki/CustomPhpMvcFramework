@@ -27,6 +27,16 @@ class Request
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
 
+    public function isGet(): bool
+    {
+        return $this->method() === 'get';
+    }
+
+    public function isPost(): bool
+    {
+        return $this->method() === 'post';
+    }
+
     public function getBody(): array
     {
         $body = [];

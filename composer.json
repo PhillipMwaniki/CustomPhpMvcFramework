@@ -1,0 +1,15 @@
+{
+    "name": "phillip/phpmvcframework",
+    "authors": [
+        {
+            "name": "Phillip Mwaniki",
+            "email": "codezeroprivate@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    }
+}
